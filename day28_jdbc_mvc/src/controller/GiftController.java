@@ -16,7 +16,7 @@ import dbConn.util.CloseHelper;
 import dbConn.util.ConnectionHelper;
 import model.GiftVO;
 
-public class GiftController { // controller
+public class GiftController { // controller : ~DAO
 
 	// 연결, 삽입, 삭제, 수정, 검색
 	static Scanner sc = new Scanner(System.in);
