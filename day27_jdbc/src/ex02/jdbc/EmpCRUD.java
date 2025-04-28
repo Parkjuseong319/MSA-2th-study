@@ -26,8 +26,8 @@ public class EmpCRUD {
 	public static Connection connection() throws ClassNotFoundException, SQLException {
 		System.out.println("로딩중....");
 		Class.forName("oracle.jdbc.OracleDriver"); // exception
-		String url = "jdbc:oracle:thin:@192.168.230.178:1521:xe";
-		String uid = "kingsmile";
+		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+		String uid = "Zoo";
 		String pwd = "oracle";
 		conn = DriverManager.getConnection(url, uid, pwd);// exception
 		return conn;
