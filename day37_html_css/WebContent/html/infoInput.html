@@ -1,0 +1,43 @@
+<!DOCTYPE html>		<!-- html5 doctype -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML Tag</title>
+<style>
+	.star { color: red; }
+	table { border-collapse: collapse;
+	 margin: auto;
+	background-color: #CED8F6;
+	}
+	#title { font-size: 40px; text-align: center;}
+	#theme { text-align: center;}
+	#phone { width: 50px; }
+</style>
+</head>
+<body>
+<h1 id="title">회원 정보 입력</h1>
+<hr><br>
+<table border="1">
+	<tr><td id="theme"><span class="star">*</span>I D</td><td><input type="text" name="id" placeholder="ID입력" required></td></tr>
+	<tr><td id="theme"><span class="star">*</span>Password</td><td><input type="password" name="Password" placeholder="Password입력"required></td></tr>
+	<tr><td id="theme"><span class="star">*</span>Password 확인</td><td><input type="password" name="Password" placeholder="Password재입력"required></td></tr>
+	<tr><td id="theme"><span class="star">*</span>이 름</td><td><input type="text" name="name" placeholder="이름 입력"required></td></tr>
+	<tr><td id="theme"><span class="star">*</span>전화번호</td><td><select><option>010</option>
+			<option>02</option><option>031</option></select> - 
+			<input type="text" id="phone" name="middleNumber"required> - 
+			<input type="text" id="phone" name="rearNumber"required></td></tr>
+	<tr><td id="theme">직 업</td><td><select><option>직업 선택</option>
+								<option>프론트엔드 개발자</option><option>백엔드 개발자</option>
+								<option>DBA</option><option>DevOps</option></select></td></tr>
+	<tr><td id="theme">성 별</td><td><input type="radio" name="gender" value="male" checked>남자 <input type="radio" name="gender" value="female">여자</td></tr>
+	<tr><td id="theme">취 미</td><td><input type="checkbox" name="hobby" value="read"> 독서
+						<input type="checkbox" name="hobby" value="swim"> 수영
+						<input type="checkbox" name="hobby" value="game"> 게임
+						<input type="checkbox" name="hobby" value="movie"> 영화감상
+						<input type="checkbox" name="hobby" value="music"> 음악듣기</td></tr>
+	<tr><td id="theme">자기소개</td><td><textarea rows="10" cols="55" name="content" placeholder="1000자 이내로 작성하세요."></textarea></td></tr>
+	<tr><td id="theme" colspan="2"><input type="submit" value="등록하기">&nbsp;&nbsp;<input type="reset" value="취소하기"></td></tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>		<!-- html5 doctype -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML Tag - ex07_input.html</title>
+<style>
+	.star{ color: red;}
+</style>
+</head>
+<body>
+<h2>여기는 zoo 컴퓨터</h2>
+<form action="" method="get">
+<span class="star">*</span>이름: <input type="text" name="name" value="zoo" readonly><br><br>
+<span class="star">*</span>id: <input type="text" name="id" placeholder="ID를 입력해주세요" required="required"><br><br>
+<span class="star">*</span>내용: <textarea rows="10" cols="55" placeholder="아무말이나" required="required"></textarea><br><br>
+취미: 
+<select><!-- <select size="5" multiple="multiple"> -->
+	<option>선택하세요</option>
+	<option>게임</option>
+	<option>낮잠</option>
+	<option>노래</option>
+	<option>등산</option>
+	<option>독서</option>
+</select>
+<br><br>
+<textarea rows="5" cols="55">자기소개 해주세요</textarea><br><br>
+radio: <input type="radio" name="opt" value="male" checked="checked">남
+<input type="radio" name="opt" value="female">여<br><br>
+checkBox: <input type="checkbox">1
+<input type="checkbox">2
+<input type="checkbox">3
+<input type="checkbox">4<br><br>
+<input type="range" max="100" min="0"><br><br>
+<input type="file"><br><br>
+<input type="number"><br><br>
+<input type="search" placeholder="검색어 입력해주세요"><br><br>
+<input type="color"><br><br>
+<input type="date"><br><br>
+<input type="datetime-local"><br><br>
+<input type="image" src="../images/2.jpg"><br><br>
+<input type="month"><br><br>
+<input type="submit" value="전송">&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="취소">
+</form>
+</body>
+</html>
