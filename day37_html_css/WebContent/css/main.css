@@ -1,6 +1,66 @@
 body {
-    background-color: yellow
+   /*  background-color: yellow; */
+    margin-top: 10px;
+    margin-left: 7px;
 }
+
+* {
+	font-family: serif, fanasy, 궁서, 굴림;
+}
+
+p em {
+	font-size: 15px;
+	color: aqua;
+}
+
+#ul {
+	background: #fc0;
+}
+
+.navi {
+	background: #ff3E00;
+	width: 960px;
+	height: 60px;
+	margin-top: -15px;
+}
+
+.navi ul{
+	list-style: none;
+	height: 40px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+
+.navi ul li{
+	display: inline;	/* 옆으로 나오게 된다. */
+	float: left;		/* 정렬방식 */
+	font-size: 15px;
+}
+
+.navi a, .navi a:visited{
+	padding: 10px 5px 5px 35px;		/*  left top right bottom 순서 */
+	display: block;
+	color: #fff;
+	width: 150px;
+	text-decoration: none;
+}
+
+.navi a:hover, .navi a:active, .navi a:focus{
+	text-shadow: 0px 2px 2px #000;
+	color: #fc0;
+}
+
+.accent{
+	color: red;
+	font-size: 15px;
+	
+}
+
+#multi { 
+	text-align: right; 
+	color: blue;
+}
+
 
 #tab {
     border: 1px dotted blue;

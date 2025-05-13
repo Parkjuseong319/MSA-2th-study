@@ -1,0 +1,58 @@
+<!DOCTYPE html>		<!-- html5 doctype -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex10_css.html</title>
+<!--
+      E:가상선택자 <--- 대화형컨텐츠
+      E::가상요소 <--- E::before    E::after
+      E:nth-child(n)  <--- E:nth-child(2) 
+      E:nth-child(2n)  <--- E:nth-child(2n) 
+      E:nth-of-type(n)
+      E:not(s) <---  .fruits  div:not(.strawberry) 
+-->
+<style type="text/css">
+ul li::before {
+	content: "fruit";	/* 반드시 기재해야한다. */
+	font-weight: bold;
+	color: red;
+	margin-right: 20px;
+}
+
+.fruits li:after {
+	content: "0";
+	font-weight: bold;
+	color: blue;
+	margin-left: 10px;
+}
+</style>
+<!-- <link href="../css/main.css" rel="stylesheet" type="text/css"> -->
+</head>
+<body>
+<ul class="fruits">
+	<li>apple</li>
+	<li>banana</li>
+	<li>pineapple</li>
+	<li>grape</li>
+	<li>lemon</li>
+	<li>orange</li>
+</ul><hr>
+<ul>
+	<li>apple</li>
+	<li>banana</li>
+	<li>pineapple</li>
+	<li>grape</li>
+	<li>lemon</li>
+	<li>orange</li>
+</ul><br>
+<img alt="Trulli" src="../images/1.jpg" style="width:50%">
+
+<div class="fruits">
+	<div>1</div>
+	<div class="strawberry">2</div>
+	<div>3</div>
+	<div>4</div>
+</div>
+
+</body>
+</html>
