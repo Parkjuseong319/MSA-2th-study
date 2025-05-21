@@ -1,0 +1,84 @@
+<!doctype html>
+<!--
+ @license
+ Copyright 2023 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html>
+<head>
+<title>Info Windows</title>
+<script>
+    	let panorama;
+
+    	function initMap() {
+    	  const astorPlace = { lat: 37.33809618345387, lng:  126.82054605125445  };
+    	  // Set up the map
+    	  const map = new google.maps.Map(document.getElementById("map"), {
+    	    center: astorPlace,
+    	    zoom: 18,
+    	    streetViewControl: true,
+    	  });
+
+    	  document.getElementById("toggle").addEventListener("click", toggleStreetView);
+
+
+    	  // We get the map's default panorama and set up some defaults.
+    	  // Note that we don't yet set it visible.
+    	  panorama = map.getStreetView(); // TODO fix type
+    	  panorama.setPosition(astorPlace);
+    	  panorama.setPov(
+    	    /** @type {google.maps.StreetViewPov} */ {
+    	      heading: 265,
+    	      pitch: 0,
+    	    },
+    	  );
+    	}
+
+    	function toggleStreetView() {
+    	  const toggle = panorama.getVisible();
+
+    	  if (toggle == false) {
+    	    panorama.setVisible(true);
+    	  } else {
+    	    panorama.setVisible(false);
+    	  }
+    	}
+
+    	window.initMap = initMap;
+    </script>
+<style>
+#map {
+	height: 100%;
+}
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#floating-panel {
+	position: absolute;
+	top: 10px;
+	left: 25%;
+	z-index: 5;
+	background-color: #fff;
+	padding: 5px;
+	border: 1px solid #999;
+	text-align: center;
+	font-family: "Roboto", "sans-serif";
+	line-height: 30px;
+	padding-left: 10px;
+}
+
+#floating-panel {
+	margin-left: -100px;
+}
+
+</style>
+</head>
+<body>
+	<!-- map-content.html -->
+<div id="map" style="height: 400px; width: 100%; margin-top: 20px;"></div>
+
+</body>
+</html>

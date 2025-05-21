@@ -1,0 +1,68 @@
+<!DOCTYPE html>		<!-- html5 doctype -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML Tag</title>
+<!-- <script type="text/javascript">
+	var person = {
+		name: "이순신",
+		phone: "010-1234-1234",
+		addr: "서울 서대문구 연희동",
+		
+		info: function(){
+			alert("name: " + this.name + "\n"
+					+ "phone: " + this.phone + "\n"
+					+"addr: " + this.addr);		
+		
+			var list = "";
+			for(var key in this){
+				list += (key + ": " + this[key] + "\n")}
+			alert(list);		
+		}		// info end
+	};
+	person.info();
+	// console.log(person.info());
+</script> -->
+<script type="text/javascript">
+	function makePerson(name, phone, addr) {
+		var person = {
+			name: name,
+			phone: phone,
+			addr: addr,
+			
+			info: function() {
+				var list = "";
+				for(var key in this){
+					if(key !== "info"){
+						list += key + ": " + this[key] + "\n";
+					}
+				}
+				alert(list);
+			}
+		};
+		return person;
+	}	// makePerson end
+	var p = makePerson("김연아", "0000", "서울시");
+	var p2 = makePerson("zoo", "1234", "안산시")	
+	
+	//var person = [p, p2];
+	//person[0].info();
+	//person[1].info();
+	
+	var person = [];
+	person.push(makePerson('happy', '9999', 'seoul'));
+	person.push(makePerson('kingsmile', '8888', 'busan'));
+	
+	for(var i in person){
+		person.info();
+	}
+	
+</script>
+
+
+
+</head>
+<body>
+
+</body>
+</html>

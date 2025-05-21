@@ -1,0 +1,59 @@
+<!DOCTYPE html>		<!-- html5 doctype -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex20_jquery</title>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+</head>
+<body>
+	<header>
+		<h4>jQuery Sample</h4>
+	</header>
+	
+	<input id="inputdemo" value="">
+	<input type="button" value="변환1">
+	<input type="button" value="변환2">
+	
+	<div class="welcome"></div>
+	<div class="welcome"></div><hr>
+	<div id='demo'>
+		<div class="inner"> Create jQuery test</div>
+	</div><hr>
+	<div id='name'>이부분 클릭 이벤트 발생하면 자신 이름 출력하기</div>
+
+	<script type="text/javascript">
+		// jquery(document).ready(function(){});
+		$('h4').css("color", 'aqua');
+		//#demo .inner 글자에 언더라인
+		// $("#demo .inner").css('text-decoration', 'underline');
+		// 기울기
+		//$("#demo .inner").css('transform', 'rotate(10deg)');
+		// $("#demo .inner").css('opacity', '0.5');	// px 단위 생략 가능
+		//아래쪽에 5px 두깨 실선 red
+		//$("#demo .inner").css("border-bottom", '5px solid red');
+		$("#demo .inner").css({
+				"border-bottom": '5px solid red',
+				'text-decoration': 'underline',
+				'opacity': '0.5',
+				'transform': 'rotate(10deg)'
+		});
+		// $('선택자').on('이벤트 종류', 할일);
+		$('#demo').on('mouseover', function(){
+			$('.inner').css("background", 'green');
+		});
+		$('#demo').on('mouseout', function(){
+			//$('.inner').css("background", 'white');
+			$('.inner').css("background", 'white').html("글자변경");
+		})
+		
+		//여러 선택자에 이벤트 추가
+		$("#demo, h4, div").mouseover(function(){
+			$(this).css("background", "yellow").html("MSA 2th!");
+		});
+		
+		$('#name').click(function(){
+			$(this).css('background', 'white').html('<h4>zooooo</h4>');
+		});
+	</script>
+</body>
+</html>
