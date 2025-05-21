@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- /META-INF/context.xml -->
+
+<Context>
+	<WatchedResource>WEB-INF/web.xml</WatchedResource>
+	
+	<Resource name="jdbc:dbcpTestDB" 
+				auth="Container"
+				type="javax.sql.DataSource"
+				username="zoo"
+				password="oracle"
+				driverClassName="oracle.jdbc.OracleDriver"
+				url="jdbc:oracle:thin:@192.168.230.36:1521:xe"
+				
+	 />
+</Context>
