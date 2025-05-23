@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- appCtx.xml -->
+	<bean id="record" class="ex03.DI.IRecordImpl">
+		<!-- <constructor-arg><value>100</value></constructor-arg>
+		<constructor-arg value="55"/>
+		<constructor-arg value="77"/> -->
+		
+		<constructor-arg index="2" value="90"/>
+		<constructor-arg index="0" value="77"/>
+		<constructor-arg index="1" value="80"/>
+	</bean>
+
+	<!-- name은 의존성 주입하는 set 메서드의 set을 뺀 메서드 명이다. -->
+	<!-- ref는 bean을 참조한다. -->
+	<bean class="ex03.DI.IRecordViewImpl" id="view">
+		<property name="record" ref="record" />
+	</bean>
+
+</beans>
