@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 
+	MyBean mybean = new Mybean();
+	MyBean mybean2 = new Mybean("zoo");
+	MyBean mybean3 = new Mybean();
+ -->
+ 
+	<bean id="myBean" name="obj, mybean" class="ex04.DI.MyBean" scope="prototype"></bean>
+	<bean id="myBean2" class="ex04.DI.MyBean">
+		<constructor-arg value="zoo" />
+	</bean>
+	
+	<bean id="single" class="ex04.DI.Singleton" factory-method="getInstance" />
+	
+	<!-- 
+		3.x.x 버전 factory-method="getInstance" 반드시 명시
+		4.x.x 버전 이후 factory-method="getInstance" 생략 가능
+		하지만 가독성을 위해 명시
+		
+		컨테이너 안에 생성된 객체(빈)을 부르는 메서드 - getBean() 
+	 -->
+
+</beans>

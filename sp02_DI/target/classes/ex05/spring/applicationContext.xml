@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- applicationContext.xml -->
+	<bean id="articleDao" class="ex05.spring.MySQLArticleDao"></bean>
+	
+	<bean id="articleService" class="ex05.spring.ArticleService">
+		<constructor-arg>
+			<ref bean="articleDao" />		<!-- 주소값 주입 -->
+		</constructor-arg>
+	</bean>
+	
+	<bean id="article" class="ex05.spring.Article" />
+
+</beans>
