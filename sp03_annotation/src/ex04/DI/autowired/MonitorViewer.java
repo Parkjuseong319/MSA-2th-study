@@ -9,7 +9,7 @@ public class MonitorViewer {
 	private Recorder recorder; // has-a 관계
 
 	// 2. setter method를 통한 자동 주입
-	@Autowired
+//	@Autowired
 	public void setRecorder(Recorder recorder) { // DI
 		this.recorder = recorder;
 	}
