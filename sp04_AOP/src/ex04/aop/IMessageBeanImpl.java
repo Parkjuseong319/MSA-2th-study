@@ -13,7 +13,11 @@ public class IMessageBeanImpl implements IMessageBean {
 	public void engHello() {
 		// TODO Auto-generated method stub
 		System.out.println("public void engHello");
-
+		try {
+			Thread.sleep(2000);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }
